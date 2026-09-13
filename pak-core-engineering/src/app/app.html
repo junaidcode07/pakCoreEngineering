@@ -12,7 +12,6 @@
   <nav class="main-nav">
 
     <a
-      routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }">
       Home
@@ -87,7 +86,22 @@
         Karachi, Sindh, Pakistan
       </p>
 
-      <p>info@pakcoreengineering.com</p>
+      <div class="footer-emails" aria-label="Email addresses">
+        <a href="mailto:info@pakcoreengineering.com">
+          <span class="email-label">General</span>
+          <span>info@pakcoreengineering.com</span>
+        </a>
+
+        <a href="mailto:hr@pakcoreengineering.com">
+          <span class="email-label">Careers</span>
+          <span>hr@pakcoreengineering.com</span>
+        </a>
+
+        <a href="mailto:inquiry@pakcoreengineering.com">
+          <span class="email-label">Inquiries</span>
+          <span>inquiry@pakcoreengineering.com</span>
+        </a>
+      </div>
 
     </div>
 
