@@ -1,1 +1,25 @@
-<router-outlet></router-outlet>
+
+<header class="navbar">
+    <div class="logo">
+      <span>PAK CORE</span>
+      <small>ENGINEERING COMPANY</small>
+    </div>
+
+    <nav>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </nav>
+  </header>
+
+  <router-outlet></router-outlet>
+
+  <footer>
+    <div>
+      <strong>PAK CORE ENGINEERING COMPANY</strong>
+      <p>WELDING • FABRICATION • QA/QC • COATING • MECHANICAL</p>
+    </div>
+
+    <p>© 2026 PAK CORE Engineering Company. All rights reserved.</p>
+  </footer>
