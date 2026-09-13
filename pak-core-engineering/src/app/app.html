@@ -1,25 +1,110 @@
-
 <header class="navbar">
-    <div class="logo">
-      <span>PAK CORE</span>
-      <small>ENGINEERING COMPANY</small>
-    </div>
 
-    <nav>
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
-        </nav>
-  </header>
+  <div class="logo-area">
+    <a routerLink="/" aria-label="PAK CORE Engineering Company">
+      <img
+        src="images/pak-core-logo.png"
+        alt="PAK CORE Engineering Company"
+        class="company-logo">
+    </a>
+  </div>
 
+  <nav class="main-nav">
+
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }">
+      Home
+    </a>
+
+    <a
+      routerLink="/about"
+      routerLinkActive="active">
+      About
+    </a>
+
+    <a
+      routerLink="/projects"
+      routerLinkActive="active">
+      Projects
+    </a>
+
+    <a
+      routerLink="/contact"
+      routerLinkActive="active">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+
+<main class="page-content">
   <router-outlet></router-outlet>
+</main>
 
-  <footer>
-    <div>
-      <strong>PAK CORE ENGINEERING COMPANY</strong>
-      <p>WELDING • FABRICATION • QA/QC • COATING • MECHANICAL</p>
+
+<footer class="site-footer">
+
+  <div class="footer-main">
+
+    <div class="footer-company">
+
+      <img
+        src="images/pak-core-logo.png"
+        alt="PAK CORE Engineering Company"
+        class="footer-logo">
+
+      <p>
+        Engineering solutions built on quality, safety and reliability.
+      </p>
+
     </div>
 
-    <p>© 2026 PAK CORE Engineering Company. All rights reserved.</p>
-  </footer>
+
+    <div class="footer-services">
+
+      <h3>Our Services</h3>
+
+      <p>Welding</p>
+      <p>Fabrication</p>
+      <p>QA/QC</p>
+      <p>Coating</p>
+      <p>Mechanical</p>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3>Contact</h3>
+
+      <p>
+        Hub River Road,<br>
+        SITE Industrial Area,<br>
+        Karachi, Sindh, Pakistan
+      </p>
+
+      <p>info@pakcoreengineering.com</p>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 PAK CORE Engineering Company.
+      All rights reserved.
+    </p>
+
+    <p>
+      WELDING • FABRICATION • QA/QC • COATING • MECHANICAL
+    </p>
+
+  </div>
+
+</footer>
