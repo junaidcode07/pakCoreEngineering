@@ -1,11 +1,10 @@
-
-
 name: Deploy Angular to GitHub Pages
 
 on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -29,11 +28,14 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: pak-core-engineering/package-lock.json
 
       - name: Install dependencies
+        working-directory: ./pak-core-engineering
         run: npm ci
 
       - name: Build Angular application
+        working-directory: ./pak-core-engineering
         run: npx ng build --configuration production --base-href /pakCoreEngineering/
 
       - name: Setup Pages
@@ -42,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist/pak-core-engineering/browser
+          path: ./pak-core-engineering/dist/pak-core-engineering/browser
 
   deploy:
     environment:
