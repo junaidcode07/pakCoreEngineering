@@ -150,50 +150,67 @@ textarea {
    ========================================= */
 
 .site-footer {
-  background: #0b2a52;
+  position: relative;
+  background: linear-gradient(115deg, #06264f 0%, #0b2a52 70%, #123b73 100%);
   color: #f7f9fb;
   margin-top: 0;
+}
+
+.site-footer::before {
+  content: "";
+  display: block;
+  height: 6px;
+  background: #f28c28;
 }
 
 
 /* Main footer */
 
 .footer-main {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 
-  padding: 72px 6% 64px;
+  padding: 48px 4% 40px;
 
   display: grid;
 
   grid-template-columns:
-    2fr
+    1.5fr
     1fr
     1.5fr;
 
-  gap: 60px;
+  gap: 70px;
+  align-items: start;
 }
 
 
 /* Footer logo */
 
 .footer-logo {
-  width: 280px;
+  width: 300px;
   max-width: 100%;
 
   background: white;
 
-  padding: 8px;
+  padding: 7px;
 
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .footer-company p {
-  max-width: 400px;
+  max-width: 420px;
 
   color: #dce6ef;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
 
-  line-height: 1.8;
+.footer-kicker {
+  color: #f28c28;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
 }
 
 
@@ -201,11 +218,11 @@ textarea {
 
 .site-footer h3 {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   color: #ffffff;
 
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: .2px;
 
   position: relative;
@@ -216,7 +233,7 @@ textarea {
 
   display: block;
 
-  width: 35px;
+  width: 28px;
   height: 3px;
 
   background: #9fb4c8;
@@ -227,12 +244,18 @@ textarea {
 
 /* Footer services */
 
+.footer-service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 16px;
+}
+
 .footer-services p {
-  margin: 8px 0;
+  margin: 0;
 
   color: #e5edf5;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 
@@ -240,16 +263,15 @@ textarea {
 
 .footer-contact p {
   color: #e5edf5;
-
-  line-height: 1.7;
-
-  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 12px;
 }
 
 .footer-emails {
   display: grid;
-  gap: 9px;
-  margin-top: 20px;
+  gap: 6px;
+  margin-top: 14px;
   width: 100%;
 }
 
@@ -259,13 +281,13 @@ textarea {
   align-items: center;
   gap: 12px;
   width: 100%;
-  min-height: 48px;
-  padding: 9px 14px;
+  min-height: 38px;
+  padding: 7px 11px;
   border: 1px solid rgba(229, 237, 245, .42);
   border-left: 3px solid #9fb4c8;
   background: rgba(255, 255, 255, .04);
   color: #ffffff;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.35;
   overflow: hidden;
@@ -298,9 +320,9 @@ textarea {
 /* Bottom footer */
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 
-  padding: 20px 6%;
+  padding: 14px max(4%, 28px);
 
   display: flex;
   justify-content: space-between;
@@ -314,7 +336,8 @@ textarea {
 
   color: #d5e0ea;
 
-  font-size: 13px;
+  font-size: 11px;
+  letter-spacing: .3px;
 }
 
 
@@ -338,6 +361,9 @@ textarea {
 
   .footer-main {
     grid-template-columns: 1fr 1fr;
+    padding-top: 38px;
+    padding-bottom: 32px;
+    gap: 42px;
   }
 
   .footer-company {
@@ -379,9 +405,9 @@ textarea {
   .footer-main {
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 28px;
 
-    padding: 40px 25px;
+    padding: 34px 25px 30px;
   }
 
   .footer-company {
@@ -391,6 +417,10 @@ textarea {
   .footer-emails a {
     grid-template-columns: 74px minmax(0, 1fr);
     font-size: 14px;
+  }
+
+  .footer-logo {
+    width: 260px;
   }
 
   .footer-bottom {
