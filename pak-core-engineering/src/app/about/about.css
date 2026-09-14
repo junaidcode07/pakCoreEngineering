@@ -1,15 +1,31 @@
 .about-page {
+  --blue: #0d3f83;
+  --blue-deep: #06264f;
+  --steel: #69737d;
+  --paper: #f4f6f7;
+  --orange: #f28c28;
+  --white: #ffffff;
   min-height: 100vh;
-  background: #f5f7f8;
-  color: #20282c;
+  background: var(--paper);
+  color: #14202d;
 }
 
 /* Hero */
 
 .about-hero {
+  position: relative;
+  overflow: hidden;
   padding: 100px 7%;
-  background: #545f66;
-  color: #ffffff;
+  background: linear-gradient(110deg, var(--blue-deep) 0%, var(--blue) 62%, #15589f 100%);
+  color: var(--white);
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 8px;
+  background: var(--orange);
 }
 
 .eyebrow {
@@ -17,11 +33,11 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: #68757c;
+  color: var(--steel);
 }
 
 .about-hero .eyebrow {
-  color: #dce1e3;
+  color: var(--orange);
 }
 
 .about-hero h1 {
@@ -34,13 +50,13 @@
 
 .about-hero h1 span {
   display: block;
-  color: #dce1e3;
+  color: #b8c8da;
 }
 
 .about-hero > p:last-child {
   max-width: 700px;
   margin-top: 30px;
-  color: #d9dfe1;
+  color: #e7edf4;
   font-size: 17px;
   line-height: 1.8;
 }
@@ -48,23 +64,50 @@
 /* Company */
 
 .company-section {
+  position: relative;
   padding: 100px 7%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  background: #ffffff;
+  background: linear-gradient(100deg, var(--white) 0%, var(--white) 68%, #edf2f5 68%, #edf2f5 100%);
+}
+
+.company-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7%;
+  width: 74px;
+  height: 5px;
+  background: var(--orange);
 }
 
 .company-section h2,
 .values h2 {
   max-width: 550px;
   margin: 0;
+  color: var(--blue-deep);
   font-size: 44px;
   line-height: 1.15;
 }
 
+.company-section h2 {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.company-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 58px;
+  height: 3px;
+  background: var(--blue);
+}
+
 .company-text {
-  color: #667177;
+  color: var(--steel);
   line-height: 1.9;
   font-size: 16px;
 }
@@ -76,8 +119,20 @@
 /* Values */
 
 .values {
+  position: relative;
   padding: 100px 7%;
-  background: #edf0f1;
+  border-top: 1px solid #d7e0e6;
+  background: #e9eff3;
+}
+
+.values::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 7%;
+  width: 180px;
+  height: 5px;
+  background: var(--blue);
 }
 
 .section-heading {
@@ -92,12 +147,27 @@
 
 .value-grid article {
   padding: 35px;
-  background: #ffffff;
-  border: 1px solid #e0e5e7;
+  background: var(--white);
+  border-top: 5px solid var(--orange);
+  box-shadow: 10px 10px 0 rgba(105, 115, 125, .2);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.value-grid article:nth-child(2) {
+  border-top-color: var(--blue);
+}
+
+.value-grid article:nth-child(3) {
+  border-top-color: var(--steel);
+}
+
+.value-grid article:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 16px 0 rgba(105, 115, 125, .25);
 }
 
 .value-grid span {
-  color: #8a959b;
+  color: var(--blue);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -105,18 +175,34 @@
 
 .value-grid h3 {
   margin: 25px 0 12px;
+  color: var(--blue-deep);
   font-size: 24px;
 }
 
 .value-grid p {
   margin: 0;
-  color: #737e83;
+  color: var(--steel);
   line-height: 1.7;
 }
 
 /* Responsive */
 
 @media (max-width: 800px) {
+  .about-hero,
+  .company-section,
+  .values {
+    padding: 78px 7%;
+  }
+
+  .company-section {
+    background: var(--white);
+  }
+
+  .about-hero h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
   .company-section {
     grid-template-columns: 1fr;
     gap: 35px;
