@@ -215,6 +215,22 @@ button:hover {
   background: #e47b18;
 }
 
+.form-status {
+  min-height: 22px;
+  margin: 16px 0 0;
+  color: var(--steel);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-status--success {
+  color: #23734d;
+}
+
+.form-status--error {
+  color: #a33a2c;
+}
+
 @media (max-width: 768px) {
 
   .contact-hero h1 {
