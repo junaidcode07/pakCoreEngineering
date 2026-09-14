@@ -97,6 +97,70 @@
   box-shadow: 10px 12px 0 rgba(105, 115, 125, .18);
 }
 
+.location-section {
+  max-width: 1160px;
+  margin: 90px auto 0;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.location-copy {
+  padding: 34px 0 34px 28px;
+  border-left: 5px solid var(--blue);
+}
+
+.location-copy .eyebrow {
+  margin-bottom: 16px;
+  color: var(--orange);
+}
+
+.location-copy h2 {
+  margin: 0 0 18px;
+  color: var(--blue-deep);
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.location-copy > p:not(.eyebrow) {
+  margin: 0 0 22px;
+  color: var(--steel);
+  line-height: 1.7;
+}
+
+.location-copy a {
+  display: inline-block;
+  padding: 11px 17px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.location-copy a:hover {
+  background: var(--blue-deep);
+  transform: translateY(-2px);
+}
+
+.map-frame {
+  min-height: 350px;
+  padding: 10px;
+  border: 1px solid #cbd6de;
+  border-top: 5px solid var(--orange);
+  background: var(--white);
+  box-shadow: 10px 12px 0 rgba(105, 115, 125, .18);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 330px;
+  border: 0;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,6 +228,16 @@ button:hover {
   .contact-container {
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .location-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 65px;
+  }
+
+  .location-copy {
+    padding: 0 0 0 20px;
   }
 
   .form-row {
